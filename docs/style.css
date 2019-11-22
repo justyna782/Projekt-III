@@ -1,0 +1,12 @@
+body {
+    background: black;
+    color:white;
+  }
+.container {
+    margin-top:5%;
+}
+  .block img {
+    margin-bottom: 8%;
+    width: 100%;
+  }
+
