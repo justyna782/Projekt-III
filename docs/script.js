@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const gifsList = document.querySelector('#gifs-list');
 
   gifsSearch.addEventListener('input', function() {
-    const inputValue = this.value;
+    const inputValue = this.value.toLowerCase();
     const gifBoxes = gifsList.querySelectorAll('.gif-box');
 
     [].forEach.call(gifBoxes, function(gifBox) {
-      const gifClassName = gifBox.querySelector('.img').className;
+      const gifClassName = gifBox.querySelector('.img').className.toLowerCase();
 
       if (gifClassName.indexOf(inputValue) === -1) {
         gifBox.style.setProperty('display', 'none');
