@@ -27,8 +27,21 @@ html, body {
   margin-top:5%;
 }
 
+/* Navbar section */
+.gifs-search-input {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 0.25rem;
+}
+
+.gifs-search-input:focus {
+  outline: none;
+}
+
+/* GIFs list section */
 .block img {
   margin-bottom: 8%;
   width: 100%;
 }
-
