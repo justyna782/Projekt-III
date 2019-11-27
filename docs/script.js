@@ -1,6 +1,6 @@
 var loaded = 0; // który element aktualnie ma być ładowany.
 var APIKEY = "bKgN9fTDyt4siFR46DXdpXAONqESQz4v";  // klucz na razie testowy
-var gifsperclick = 11;  //ile gifów na kliknięcie
+var gifsperclick = 3;  //ile gifów na kliknięcie
 
         // SZUKANIE DANYCH GIFÓW:
   document.getElementById("btnSearch").addEventListener("click", ev => {
@@ -16,11 +16,11 @@ var gifsperclick = 11;  //ile gifów na kliknięcie
         //  data, pagination, meta
   
         for (i = 0; i < gifsperclick; i++){
-          let fig = document.createElement("figure");
+          let fig = document.createElement("div");
           let img = document.createElement("img");
           img.src = content.data[loaded].images.downsized.url;
           fig.appendChild(img);
-          let out = document.querySelector("#gifs-list");
+          let out = document.querySelector(".out");
           out.insertAdjacentElement("afterbegin", fig);
           loaded += 1
         }
@@ -41,12 +41,13 @@ var gifsperclick = 11;  //ile gifów na kliknięcie
             .then(content => {
 //  data, pagination, meta
   
+
         for (i = 0; i < gifsperclick; i++){
-            let fig = document.createElement("figure");
+            let fig = document.createElement("div");
             let img = document.createElement("img");
             img.src = content.data[loaded].images.downsized.url;
             fig.appendChild(img);
-            let out = document.querySelector("#gifs-list");
+            let out = document.querySelector(".out");
             out.insertAdjacentElement("afterbegin", fig);
             loaded += 1;
     }
