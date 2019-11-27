@@ -2,11 +2,26 @@ body {
     background: black;
     color:white;
   }
-.container {
-    margin-top:5%;
-}
-  .block img {
-    margin-bottom: 8%;
-    width: 100%;
+
+  html {
+    font-size: 30px;
+    text-align:center;
+  }
+  form * {
+    font-family: inherit;
+    font-size: inherit;
+  }
+  img {
+    width: 200px;
   }
 
+  .out {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+
+ .out>figure:nth-child(4)>img {
+    width:400px;
+}
