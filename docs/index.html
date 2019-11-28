@@ -9,17 +9,24 @@
 </head>
 
 <body>
+  <!-- Navbar section -->
+  <nav class="navigation">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="images/logo.png" alt="logo">
+        <h1>Giphies</h1>
+      </a>
+      <form class="gifs-search-form">
+        <input type="search" class="gifs-search-input" id="gifs-search" placeholder="Search the GIFs"
+          aria-label="Search" autocomplete="off">
+        <button id="btnSearch"><img src="images/search-icon.svg" alt=""></button>
+        <button id="more">9 more</button>
+      </form>
+    </div>
+  </nav>
   <main>
-    <form>
-      <label for="search">Search</label>
-      <input id="search" type="search" />
-      <button id="btnSearch">Go</button>
-   <button id="more">3 more</button>
-    </form>
     <div class="out"></div>
   </main>
-
-  
   <script src="script.js"></script>
 </body>
 
