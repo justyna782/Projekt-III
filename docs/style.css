@@ -71,7 +71,6 @@ a:hover {
   outline: none;
 }
 
-
 #btnSearch {
   display: inline-block;
   width: 3rem;
@@ -98,6 +97,10 @@ a:hover {
 }
 
 @media (max-width: 999px) {
+  .container {
+    padding-bottom: 14%;
+  }
+
   img {
     width: 200px;
     height: 200px;
