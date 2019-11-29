@@ -5,6 +5,7 @@ var gifsperclick = 9;  //ile gifów na kliknięcie
 // SZUKANIE DANYCH GIFÓW:
 document.getElementById("btnSearch").addEventListener("click", ev => {
   ev.preventDefault(); //żeby strona się nie przeładowywała po kliknięciu
+  Array.from(document.querySelectorAll('div .gif-element')).forEach(el => el.remove());   // usuwanie reszty przed wstawieniem nowych
   loaded = 0;  // reset indexu gifów - wyswietlanie znowu od zerowego
   var url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=${loaded * gifsperclick + gifsperclick}&q=`;  // dostęp do gifów z określoną liczbą elementów
   str = document.getElementById("gifs-search").value.trim();
@@ -17,6 +18,7 @@ document.getElementById("btnSearch").addEventListener("click", ev => {
 
       for (i = 0; i < gifsperclick; i++) {
         let fig = document.createElement("div");
+        fig.className = "gif-element";
         let img = document.createElement("img");
         img.src = content.data[loaded].images.downsized.url;
         fig.appendChild(img);
@@ -42,6 +44,7 @@ document.getElementById("more").addEventListener("click", e => {
 
       for (i = 0; i < gifsperclick; i++) {
         let fig = document.createElement("div");
+        fig.className = "gif-element";
         let img = document.createElement("img");
         img.src = content.data[loaded].images.downsized.url;
         fig.appendChild(img);
