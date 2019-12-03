@@ -23,13 +23,6 @@ html, body {
   font-family: var(--main-font-family);
 }
 
-.container {
-  display: block;
-  text-align: center;
-  padding-bottom: 5%;
-  /* margin: 0 auto; */
-}
-
 /* Navbar section */
 .navigation {
   background-color: black;
@@ -41,6 +34,12 @@ html, body {
   z-index: 9999;
 }
 
+.container {
+  margin: 0 auto; 
+  width: 60%;
+  padding-bottom: 2rem;
+}
+
 a, a:hover {
   text-decoration: none;
   color: white;
@@ -50,7 +49,7 @@ a, a:hover {
   width: 3rem;
   height: auto;
   margin-left: -0.625rem;
-  /* margin-bottom: 1.5rem; */
+  vertical-align: -25%;
 }
 
 .logo h1 {
@@ -64,61 +63,45 @@ a, a:hover {
 }
 
 .gifs-search-input {
-  /* width: 100%; */
-  width: 60%;
+  width: calc(100% - 3rem);
   height: 3rem;
   border: none;
   padding: 0 1rem;
-  /* border-radius: 0.25rem; */
-  margin-left: -1.7rem;
+  border-radius: 0.25rem 0 0 0.25rem;
 }
 
-.gifs-search-input:focus {
-  outline: none;
-}
-
-/* GIFs list section */
-/* 
-#gifs-list {
-  margin-top: 3%;
-}
-
-.block img {
-  margin-bottom: 8%;
-  width: 100%;
-} 
-*/
-
-#btnSearch {
+.btn-search {
   display: inline-block;
   width: 3rem;
   height: 3rem;
   background: linear-gradient(30deg, rgba(131, 58, 180, 1) 13%, rgba(255, 118, 118, 1) 100%);
   border: none;
+  border-radius: 0 0.25rem 0.25rem 0;
   position: absolute;
-  padding: 6px;
 }
 
-#btnSearch img {
+.btn-search img {
   width: 2rem;
   height: 2rem;
 }
 
-#more {
+.more {
   height: 2rem;
   width: 5rem;
-  position: absolute;
   background-color: rgb(217, 122, 255);
   border: none;
-  margin-top: 4rem;
-  margin-left: -60%;
+  margin-top: 2rem;
+  border-radius: 0.25rem;
 }
 
-@media (max-width: 999px) {
-  .container {
-    padding-bottom: 14%;
-  }
+.gifs-search-input:focus,
+.btn-search:focus,
+.more:focus {
+  outline: none;
+}
 
+/* GIFs list section */
+@media (max-width: 999px) {
   img {
     width: 200px;
     height: 200px;
