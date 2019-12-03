@@ -4,84 +4,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css" type="text/css" />
   <title>Giphies</title>
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3 col-md-4 col-6">
-        <a class="block">
-          <img class="img" src="https://data.whicdn.com/images/321462270/original.gif" alt="">
-          <img class="img" src="https://data.whicdn.com/images/321462270/original.gif" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-6">
-        <a class="block">
-          <img class="img" src="https://data.whicdn.com/images/321462270/original.gif" alt="">
-          <img class="img" src="https://data.whicdn.com/images/321462270/original.gif" alt="">
-        </a>
-      </div>
-      <div class="col-lg-6 col-md-4 col-6">
-        <a class="block">
-          <img class="img" src="https://data.whicdn.com/images/321462270/original.gif" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-6">
-        <a class="block">
-          <img class="img" src="https://data.whicdn.com/images/321462270/original.gif" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-6">
-        <a class="block">
-          <img class="img" src="https://data.whicdn.com/images/321462270/original.gif" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-6">
-        <a class="block">
-          <img class="img" src="https://data.whicdn.com/images/321462270/original.gif" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-6">
-        <a class="block">
-          <img class="img" src="https://data.whicdn.com/images/321462270/original.gif" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-6">
-        <a class="block">
-          <img class="img" src="https://data.whicdn.com/images/321462270/original.gif" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-6">
-        <a class="block">
-          <img class="img" src="https://data.whicdn.com/images/321462270/original.gif" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-6">
-        <a class="block">
-          <img class="img" src="https://data.whicdn.com/images/321462270/original.gif" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-6">
-        <a class="block">
-          <img class="img" src="https://data.whicdn.com/images/321462270/original.gif" alt="">
-        </a>
-      </div>
+  <!-- Navbar section -->
+  <nav class="navigation">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="images/logo.png" alt="logo">
+        <h1>Giphies</h1>
+      </a>
+      <form class="gifs-search-form">
+        <input type="search" class="gifs-search-input" id="gifs-search" placeholder="Search the GIFs"
+          aria-label="Search" autocomplete="off">
+        <button id="btnSearch"><img src="images/search-icon.svg" alt=""></button>
+        <button id="more">9 more</button>
+      </form>
     </div>
-  </div>
+  </nav>
+  <main>
+    <div class="out">
+      <div class="gif-element"><img src="https://data.whicdn.com/images/321462270/original.gif" alt=""></div>
+      <div class="gif-element"><img src="https://data.whicdn.com/images/321462270/original.gif" alt=""></div>
+      <div class="gif-element"><img src="https://data.whicdn.com/images/321462270/original.gif" alt=""></div>
+      <div class="gif-element"><img src="https://data.whicdn.com/images/321462270/original.gif" alt=""></div>
+      <div class="gif-element"><img src="https://data.whicdn.com/images/321462270/original.gif" alt=""></div>
+      <div class="gif-element"><img src="https://data.whicdn.com/images/321462270/original.gif" alt=""></div>
+      <div class="gif-element"><img src="https://data.whicdn.com/images/321462270/original.gif" alt=""></div>
+      <div class="gif-element"><img src="https://data.whicdn.com/images/321462270/original.gif" alt=""></div>
+      <div class="gif-element"><img src="https://data.whicdn.com/images/321462270/original.gif" alt=""></div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+    </div>
+  </main>
+  <script src="script.js"></script>
 </body>
 
 </html>
