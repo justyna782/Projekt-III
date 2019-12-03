@@ -9,10 +9,13 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+*:focus {
+  box-shadow: none;
+}
+
+html, body {
   background: black;
-  color: white;
+  color:white;
   font-size: 16px;
   line-height: 1.7;
   margin: 0;
@@ -24,6 +27,7 @@ body {
   display: block;
   text-align: center;
   padding-bottom: 5%;
+  /* margin: 0 auto; */
 }
 
 /* Navbar section */
@@ -37,8 +41,7 @@ body {
   z-index: 9999;
 }
 
-a,
-a:hover {
+a, a:hover {
   text-decoration: none;
   color: white;
 }
@@ -47,6 +50,7 @@ a:hover {
   width: 3rem;
   height: auto;
   margin-left: -0.625rem;
+  /* margin-bottom: 1.5rem; */
 }
 
 .logo h1 {
@@ -60,16 +64,30 @@ a:hover {
 }
 
 .gifs-search-input {
+  /* width: 100%; */
   width: 60%;
   height: 3rem;
   border: none;
   padding: 0 1rem;
+  /* border-radius: 0.25rem; */
   margin-left: -1.7rem;
 }
 
 .gifs-search-input:focus {
   outline: none;
 }
+
+/* GIFs list section */
+/* 
+#gifs-list {
+  margin-top: 3%;
+}
+
+.block img {
+  margin-bottom: 8%;
+  width: 100%;
+} 
+*/
 
 #btnSearch {
   display: inline-block;
