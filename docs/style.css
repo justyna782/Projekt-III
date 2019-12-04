@@ -126,6 +126,22 @@ a, a:hover {
   width: calc(100% - 15rem);
 }
 
+/* Navbar animation on scrolling - RWD */
+@media (max-width: 760px) {
+  .animated-element {
+    display: block;
+  }
+
+  .animated-logo {
+    transform: translateY(0);
+  }
+
+  .animated-form {
+    margin-top: 0;
+    width: 100%;
+  }
+}
+
 /* GIFs list section */
 .gifs-list {
   padding-top: 15rem;
