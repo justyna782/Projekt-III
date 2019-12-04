@@ -111,6 +111,14 @@ a, a:hover {
   outline: none;
 }
 
+.displayed-gifs {
+  margin-left: 2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: var(--second-font-family);
+  vertical-align: -10%;
+}
+
 /* Navbar animation on scrolling */
 .animated-element {
   display: flex;
@@ -124,6 +132,19 @@ a, a:hover {
 .animated-form {
   margin-top: 1rem;
   width: calc(100% - 15rem);
+}
+
+/* RWD - small devices */
+@media (max-width: 450px) {
+  .container {
+    width: 80%;
+  }
+
+  .displayed-gifs {
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: normal;
+  }
 }
 
 /* Navbar animation on scrolling - RWD */

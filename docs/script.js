@@ -2,13 +2,16 @@ var loaded = 0; // który element aktualnie ma być ładowany.
 var APIKEY = "bKgN9fTDyt4siFR46DXdpXAONqESQz4v";  // klucz na razie testowy
 var gifsperclick = 9;  //ile gifów na kliknięcie
 
+const gifsSearchInput = document.getElementById('gifs-search');
+const displayedGifs = document.querySelector('.displayed-gifs');
+
 // SZUKANIE DANYCH GIFÓW:
 document.getElementById("btnSearch").addEventListener("click", ev => {
   ev.preventDefault(); //żeby strona się nie przeładowywała po kliknięciu
   Array.from(document.querySelectorAll('div .gif-element')).forEach(el => el.remove());   // usuwanie reszty przed wstawieniem nowych
   loaded = 0;  // reset indexu gifów - wyswietlanie znowu od zerowego
   var url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=${loaded * gifsperclick + gifsperclick}&q=`;  // dostęp do gifów z określoną liczbą elementów
-  str = document.getElementById("gifs-search").value.trim();
+  str = gifsSearchInput.value.trim();
   url = url.concat(str);
   fetch(url)
     .then(response => response.json())
@@ -30,6 +33,10 @@ document.getElementById("btnSearch").addEventListener("click", ev => {
     .catch(err => {
       console.error(err);
     });
+
+  displayedGifs.innerHTML = str;    // show which gifs are displayed
+
+  gifsSearchInput.value = '';   // clear searchbar input
 });
 
 // ŁADOWANIE KOLEJNYCH GIFÓW:
