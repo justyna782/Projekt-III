@@ -45,11 +45,17 @@ a, a:hover {
   color: white;
 }
 
+.logo {
+  position: relative; 
+  display: block;
+  transition: transform 0.2s ease;
+} 
+
 .logo img {
   width: 3rem;
   height: auto;
   margin-left: -0.625rem;
-  vertical-align: -25%;
+  display: inline-block;
 }
 
 .logo h1 {
@@ -57,9 +63,16 @@ a, a:hover {
   margin: 0;
   padding: 0;
   font-size: 3rem;
+  line-height: 1;
   text-transform: uppercase;
   font-weight: bold;
   font-family: var(--second-font-family);
+  position: absolute;
+}
+
+.gifs-search-form {
+  width: 100%;
+  transition: width 0.2s ease;
 }
 
 .gifs-search-input {
@@ -98,6 +111,21 @@ a, a:hover {
 .btn-search:focus,
 .more:focus {
   outline: none;
+}
+
+/* Navbar animation on scrolling */
+.animated-element {
+  display: flex;
+  justify-content: space-between;
+}
+
+.animated-logo {
+  transform: translateY(1rem);
+}
+
+.animated-form {
+  margin-top: 1rem;
+  width: calc(100% - 15rem);
 }
 
 /* GIFs list section */

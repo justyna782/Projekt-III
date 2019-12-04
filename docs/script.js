@@ -57,3 +57,24 @@ document.getElementById("more").addEventListener("click", e => {
       console.error(err);
     });
 });
+
+// Navbar animation on scrolling
+let scrollPosition = 0;
+
+const elementToAnimate = document.querySelector('.element-to-animate');
+const logo = elementToAnimate.querySelector('.logo');
+const gifsSearchForm = elementToAnimate.querySelector('.gifs-search-form');
+
+window.addEventListener('scroll', function() {
+  scrollPosition = window.scrollY;
+
+  if (scrollPosition >= 100) {
+    elementToAnimate.classList.add('animated-element');
+    logo.classList.add('animated-logo');
+    gifsSearchForm.classList.add('animated-form');
+  } else {
+    elementToAnimate.classList.remove('animated-element');
+    logo.classList.remove('animated-logo');
+    gifsSearchForm.classList.remove('animated-form');
+  }
+});
