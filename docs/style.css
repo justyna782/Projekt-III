@@ -27,9 +27,7 @@ html, body {
 .navigation {
   background-color: black;
   padding: 0.5rem 0;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  position: fixed;
   width: 100%;
   z-index: 9999;
 }
@@ -129,6 +127,10 @@ a, a:hover {
 }
 
 /* GIFs list section */
+.gifs-list {
+  padding-top: 15rem;
+}
+
 @media (max-width: 999px) {
   img {
     width: 200px;
